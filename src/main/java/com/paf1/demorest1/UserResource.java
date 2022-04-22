@@ -19,7 +19,7 @@ public class UserResource
 	
 	
 	@GET
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces({MediaType.APPLICATION_XML , MediaType.APPLICATION_JSON})
 	public List<User> getUsers()
 	{
 		System.out.println("getUser called");
@@ -30,13 +30,13 @@ public class UserResource
 	
 	@GET
 	@Path("user/{id}")
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces({MediaType.APPLICATION_JSON , MediaType.APPLICATION_XML})
 	public User getUser(@PathParam("id") int id)
 	{
 		
-		return repo.getUser(id);  
+		return repo.getUser(id);   
 	}
-	
+	  
 	
 	
  	
@@ -50,7 +50,7 @@ public class UserResource
 		return u1; 
 	}
 	
-	
+	 
 }
 
 
