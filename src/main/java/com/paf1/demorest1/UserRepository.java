@@ -11,15 +11,13 @@ import java.util.List;
 public class UserRepository 
 {
 	
-	
-	Connection con = null; 	
-	
+	Connection con = null;	
 	
 	public UserRepository()
 	{
-		String url = "jdbc:mysql://localhost:3306/userdb";
+		String url = "jdbc:mysql://localhost:3308/electrogrid";
 		String username = "root";
-		String password = "0";
+		String password = "";
 		
 		try {
 			 Class.forName("com.mysql.jdbc.Driver");
@@ -35,7 +33,7 @@ public class UserRepository
 	public List<User> getUsers()
 	{
 		List<User> users = new ArrayList<>();
-		String sql = "select * from userx";
+		String sql = "select * from user";
 		
 		try
 		{
@@ -69,7 +67,7 @@ public class UserRepository
 	
 	public User getUser(int id)
 	{
-		String sql = "select * from userx where id="+id  ;
+		String sql = "select * from user where id="+id  ;
 		User u = new User();
 		
 		try
@@ -103,7 +101,7 @@ public class UserRepository
 
 
 	public void create(User u1) {
-		String sql = "insert into userx values(?,?,?,?,?)";
+		String sql = "insert into user values(?,?,?,?,?)";
 		
 		try
 		{
@@ -124,6 +122,54 @@ public class UserRepository
 			System.out.println(e);
 		}
 	
+	}
+	
+	
+	
+	
+	public void update(User u1) {
+		String sql = " update user set name=? , phone=? ,email=? , password=? where id=? ";
+		
+		try
+		{
+			PreparedStatement st = con.prepareStatement(sql);
+			
+			st.setInt(5,u1.getUserID());
+			st.setString(1, u1.getName());
+			st.setString(2, u1.getPhone());
+			st.setString(3, u1.getEmail());
+			st.setString(4, u1.getPassword());
+			
+			st.executeUpdate();
+			
+			
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+	
+	}
+
+
+
+	public void delete(int id) {
+		
+		String sql = " delete from user where id=? ";
+		
+		try
+		{
+			PreparedStatement st = con.prepareStatement(sql);
+			
+			st.setInt(1,id);					
+			st.executeUpdate();
+						
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		
 	}
 	
 	
