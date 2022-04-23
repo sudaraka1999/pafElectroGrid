@@ -28,16 +28,16 @@ public class UserResource
 	
 	
 	
-	@GET
-	@Path("user/{id}")
-	@Produces(MediaType.APPLICATION_XML)
-	public User getUser(@PathParam("id") int id)
-	{
-		
-		return repo.getUser(id);  
-	}
-	
-	
+//	@GET
+//	@Path("user/{id}")
+//	@Produces(MediaType.APPLICATION_XML)
+//	public User getUser(@PathParam("id") int id)
+//	{
+//		
+//		return repo.getUser(id);  
+//	}
+//	
+//	
 	
  	
 	@POST
