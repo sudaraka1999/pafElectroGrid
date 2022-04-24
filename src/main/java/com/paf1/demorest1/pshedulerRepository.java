@@ -74,14 +74,48 @@ Connection con = null;
 			
 			st.setInt(1, p1.getpLid());
 			st.setString(2,p1.getpLocation());
+			st.setString(3, p1.getpDuration());
 			st.setString(4, p1.getpReason());
 			st.setString(5, p1.getpDescription());
+			
 			st.executeUpdate();
+			
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		
 	}
 	
+	public void update(psheduler p1) {
+		String sql = "update pshedule set location=?,duration=?,reason=?,description=? where id=?";
+		try {
+			PreparedStatement st = con.prepareStatement(sql);
+			
+			
+			st.setString(1,p1.getpLocation());
+			st.setString(2, p1.getpDuration());
+			st.setString(3, p1.getpReason());
+			st.setString(4, p1.getpDescription());
+			st.setInt(5, p1.getpLid());
+			st.executeUpdate();
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+	}
+	public void delete(int id) {
+		String sql = "delete from pshedule where id=?";
+		try {
+			PreparedStatement st = con.prepareStatement(sql);
+			
+			st.setInt(1, id);
+			st.executeUpdate();
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+	}
 
 }
