@@ -1,6 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
+    
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.paf1</groupId>
@@ -19,7 +20,7 @@
                 <inherited>true</inherited>
                 <configuration>
                     <source>1.8</source>
-                    <target>1.8</target>
+                    <target>c</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -37,17 +38,6 @@
         </dependencies>
     </dependencyManagement>
     
-    
-    
-   
-    
-    
-    
-    
-    
-    
-    
-
     <dependencies>
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
@@ -59,11 +49,16 @@
             <groupId>org.glassfish.jersey.inject</groupId>
             <artifactId>jersey-hk2</artifactId>
         </dependency>
+<<<<<<< HEAD
        
+=======
+        
+>>>>>>> 4f4255b8b86ec16eee1367dfffcf32222190cbf3
         <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-json-binding</artifactId>
         </dependency>
+<<<<<<< HEAD
      
      <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 <dependency>
@@ -73,11 +68,23 @@
 </dependency>
 
      
+=======
+          
+        
+>>>>>>> 4f4255b8b86ec16eee1367dfffcf32222190cbf3
         <dependency>
  <groupId>org.glassfish.jersey.media</groupId>
  <artifactId>jersey-media-jaxb</artifactId>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.27</version>
+</dependency>
+        
 
 <dependency>
  <groupId>org.glassfish.jersey.media</groupId>
@@ -92,15 +99,8 @@
 </dependency>
 
 
-
-    </dependencies>
-    
-    
-    
- 
-    
-    
-    
+</dependencies>
+      
     
     
  <properties>
@@ -108,3 +108,4 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
+
