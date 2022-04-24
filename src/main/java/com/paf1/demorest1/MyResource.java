@@ -1,4 +1,4 @@
-package com.paf1.demorest1;
+package com.savindi.ElectroGrid;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -23,4 +23,3 @@ public class MyResource {
         return "Got it!";
     }
 }
- 
