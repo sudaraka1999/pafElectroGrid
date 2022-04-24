@@ -3,7 +3,7 @@ package com.paf1.demorest1;
 import java.util.Arrays;
 import java.util.List;
 
-//import jakarta.websocket.server.PathParam;
+
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
@@ -33,6 +33,19 @@ public class UserResource
 	
 	
 	
+<<<<<<< HEAD
+//	@GET
+//	@Path("user/{id}")
+//	@Produces(MediaType.APPLICATION_XML)
+//	public User getUser(@PathParam("id") int id)
+//	{
+//		
+//		return repo.getUser(id);  
+//	}
+//	
+//	
+=======
+
 	@GET
 	@Path("user/{id}")
 	@Produces({MediaType.APPLICATION_JSON , MediaType.APPLICATION_XML})
@@ -42,7 +55,9 @@ public class UserResource
 		return repo.getUser(id);   
 	}
 	  
+
 	
+>>>>>>> 4f4255b8b86ec16eee1367dfffcf32222190cbf3
 	
  	
 	@POST
