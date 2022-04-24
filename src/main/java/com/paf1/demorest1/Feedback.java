@@ -34,6 +34,12 @@ public class Feedback {
 		this.fdescription = fdescription;
 	}
 	
+	@Override
+	public String toString() {
+		return "Feedback [fid=" + fid + ", fusername=" + fusername + ", fpassword=" + fpassword + ", fdescription="
+				+ fdescription + "]";
+	}
+	
 	
 	
 
