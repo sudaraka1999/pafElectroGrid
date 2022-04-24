@@ -33,6 +33,18 @@ public class UserResource
 	
 	
 	
+<<<<<<< HEAD
+//	@GET
+//	@Path("user/{id}")
+//	@Produces(MediaType.APPLICATION_XML)
+//	public User getUser(@PathParam("id") int id)
+//	{
+//		
+//		return repo.getUser(id);  
+//	}
+//	
+//	
+=======
 
 	@GET
 	@Path("user/{id}")
@@ -45,6 +57,7 @@ public class UserResource
 	  
 
 	
+>>>>>>> 4f4255b8b86ec16eee1367dfffcf32222190cbf3
 	
  	
 	@POST
