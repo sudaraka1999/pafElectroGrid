@@ -19,7 +19,7 @@
                 <inherited>true</inherited>
                 <configuration>
                     <source>1.8</source>
-                    <target>1.8</target>
+                    <target>c</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -37,17 +37,6 @@
         </dependencies>
     </dependencyManagement>
     
-    
-    
-   
-    
-    
-    
-    
-    
-    
-    
-
     <dependencies>
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
@@ -59,11 +48,16 @@
             <groupId>org.glassfish.jersey.inject</groupId>
             <artifactId>jersey-hk2</artifactId>
         </dependency>
+<<<<<<< HEAD
        
+=======
+        
+>>>>>>> 463e5b6259a145a4a903eba5f47fd1ed889d0468
         <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-json-binding</artifactId>
         </dependency>
+<<<<<<< HEAD
    
    
      <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
@@ -73,12 +67,23 @@
     <version>8.0.27</version>
 </dependency>
       
+=======
+          
+>>>>>>> 463e5b6259a145a4a903eba5f47fd1ed889d0468
         
         <dependency>
  <groupId>org.glassfish.jersey.media</groupId>
  <artifactId>jersey-media-jaxb</artifactId>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.27</version>
+</dependency>
+        
 
 
 
